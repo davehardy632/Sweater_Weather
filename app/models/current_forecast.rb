@@ -1,5 +1,6 @@
 class CurrentForecast
-  attr_reader :time,
+  attr_reader :id,
+              :time,
               :summary,
               :icon,
               :precipitation_probablility,
@@ -8,8 +9,9 @@ class CurrentForecast
               :humidity,
               :uv_index,
               :visibility
-              
+
   def initialize(current_forecast_data)
+    @id = "current forecast info"
     @time = current_forecast_data[:time]
     @summary = current_forecast_data[:summary]
     @icon = current_forecast_data[:icon]

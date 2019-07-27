@@ -21,7 +21,7 @@ describe "Forecast and location Api" do
     expect(response).to be_successful
 
     weather_data = JSON.parse(response.body)
-
+binding.pry
     expect(weather_data["data"].count).to eq(3)
   end
 end

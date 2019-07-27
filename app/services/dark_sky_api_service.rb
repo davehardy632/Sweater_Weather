@@ -1,7 +1,10 @@
 class DarkSkyApiService
 
+  attr_reader :id
+
   def initialize(coordinate_object)
     @coordinate_object = coordinate_object
+    @id = "forecast response"
   end
 
   def parse_weather_data
@@ -24,11 +27,16 @@ class DarkSkyApiService
     end
   end
 
-  def render_weather_data
-    parse_current
-    parse_hourly
-    parse_daily
-    parse_current, parse_daily, parse_hourly
+  def serialize_daily
+    DailyForecastSerializer.new(parse_daily)
+  end
+
+  def serialize_hourly
+    HourlyForecastSerializer.new(parse_hourly)
+  end
+
+  def serialize_current
+    CurrentForecastSerializer.new(parse_current)
   end
 
   def parsed_response(response)
