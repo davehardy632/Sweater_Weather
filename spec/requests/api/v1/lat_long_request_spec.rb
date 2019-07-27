@@ -9,6 +9,8 @@ describe "Forecast and location Api" do
 
     lat_long = JSON.parse(response.body)
 
-    expect(lat_long["data"].count).to eq(2)
+    expect(lat_long["data"].keys).to eq(["id", "type", "attributes"])
+    expect(lat_long["data"]["attributes"].keys).to eq(["location", "latitude", "longitude"])
+    expect(lat_long["data"]["attributes"]["location"]).to eq("Denver Colorado")
   end
 end
