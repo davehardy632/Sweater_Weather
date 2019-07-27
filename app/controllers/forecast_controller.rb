@@ -1,7 +1,8 @@
 class ForecastController < ApplicationController
 
   def index
-    render json: LatitudeLongitudeSerializer.new(dark_sky_api_service.render_weather_data(google_geocode_service.return_coordinates(forecast_params["location"])))
+    weather_service = DarkSkyApiService.new(google_geocode_service.return_coordinates(forecast_params["location"]))
+    render json: ForecastSerializer.new(weather_service.render_weather_data)
   end
 
   private
@@ -14,8 +15,8 @@ class ForecastController < ApplicationController
     GoogleGeocodeService.new
   end
 
-  def dark_sky_api_service
-    DarkSkyApiService.new
-  end
+  # def dark_sky_api_service
+  #   DarkSkyApiService.new
+  # end
 
 end
