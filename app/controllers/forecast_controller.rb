@@ -1,11 +1,14 @@
 class ForecastController < ApplicationController
 
+  # def index
+  #   weather_service = DarkSkyApiService.new(google_geocode_service.return_coordinates(forecast_params["location"]))
+  #   render json: ForecastSerializer.new(weather_service)
+  # end
+
   def index
-    weather_service = DarkSkyApiService.new(google_geocode_service.return_coordinates(forecast_params["location"]))
-    render json: ForecastSerializer.new(weather_service)
+    render json: ForecastSerializer.new(forecast_facade.forecast_data_by_city(forecast_params["location"]))
   end
 
-  # forecast_facade.return_forecast_data(forecast_params["location"])
 
   private
 
@@ -17,9 +20,9 @@ class ForecastController < ApplicationController
     ForecastFacade.new
   end
 
-  def google_geocode_service
-    GoogleGeocodeService.new
-  end
+  # def google_geocode_service
+  #   GoogleGeocodeService.new
+  # end
 
   # def dark_sky_api_service
   #   DarkSkyApiService.new

@@ -12,7 +12,7 @@ class DarkSkyApiService
   end
 
   def parse_current
-    CurrentForecast.new(parse_weather_data[:currently])
+    CurrentForecast.new(parse_weather_data)
   end
 
   def parse_hourly

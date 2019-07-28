@@ -1,6 +1,7 @@
 class CurrentForecastSerializer
   include FastJsonapi::ObjectSerializer
   attributes  :id,
+              :timezone,
               :time,
               :summary,
               :icon,
