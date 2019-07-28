@@ -9,7 +9,6 @@ class ForecastController < ApplicationController
     render json: ForecastSerializer.new(forecast_facade.forecast_data_by_city(forecast_params["location"]))
   end
 
-
   private
 
   def forecast_params
