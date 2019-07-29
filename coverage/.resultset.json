@@ -1,49 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/coordinate.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/trip_restaurants_controller.rb": [
+        1,
+        null,
         1,
         1,
         null,
         null,
+        1,
         null,
-        null,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
         null,
         null,
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/current_forecast.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/serializers/trip_restaurant_serializer.rb": [
+        1,
         1,
         1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
         null
@@ -52,6 +34,53 @@
         0,
         0,
         0,
+        0
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/current_forecast.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/coordinate.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         0
       ],
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/daily_forecast.rb": [
@@ -261,10 +290,6 @@
         0,
         0
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/forecast_controller.rb": [
         0,
         null,
@@ -386,6 +411,6 @@
         0
       ]
     },
-    "timestamp": 1564411227
+    "timestamp": 1564413583
   }
 }
