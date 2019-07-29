@@ -8,8 +8,7 @@ describe "time length between locations and find matching cuisines" do
     expect(response).to be_successful
 
     trip_data = JSON.parse(response.body)
-
-
+binding.pry
     expect(trip_data.count).to eq(3)
   end
 end
