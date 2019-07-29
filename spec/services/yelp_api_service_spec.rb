@@ -6,18 +6,15 @@ describe YelpApiService do
     it "finds restaurant info related to the trip length" do
 
 
-       binding.pry
       food_type = "chinese"
       finish = "pueblo,co"
-      # trip_object = Trip.new(duration: )
+      seconds = 6413
+      format = "1 hour 47 mins"
 
-      yelp_service = YelpApiService.new(food_type, finish, trip_object)
+      yelp_service = YelpApiService.new(food_type, finish, seconds, format)
       yelp_response = yelp_service.return_cuisines_and_hours
 
-      binding.pry
-
-      expect(trip_data[:routes].first[:legs].first[:duration][:text]).to eq("1 hour 47 mins")
-
+      expect(yelp_response[:businesses].first[:name]).to eq("Kan's Kitchen")\
     end
   end
 end

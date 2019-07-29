@@ -31,7 +31,9 @@ class TripRestaurantFacade
   end
 
   def yelp_api_service
-    YelpApiService.new(food_type, finish, trip_object)
+    seconds = trip_object.duration_in_seconds
+    format = trip_object.duration
+    YelpApiService.new(food_type, finish, seconds, format)
   end
 
 end

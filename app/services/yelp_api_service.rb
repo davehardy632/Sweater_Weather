@@ -1,11 +1,11 @@
 class YelpApiService
 
   attr_reader :food_type, :finish, :trip_duration, :trip_duration_in_seconds, :duration
-  def initialize(food_type, finish, trip_object)
+  def initialize(food_type, finish, seconds, format)
     @food_type = food_type
     @finish = finish
-    @trip_duration = trip_object.duration
-    @trip_duration_in_seconds = trip_object.duration_in_seconds
+    @trip_duration = format
+    @trip_duration_in_seconds = seconds
   end
 
   def return_cuisines_and_hours
