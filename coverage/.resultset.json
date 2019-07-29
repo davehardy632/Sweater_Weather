@@ -11,7 +11,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -25,6 +25,19 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/facades/trip_restaurant_facade.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -411,6 +424,6 @@
         0
       ]
     },
-    "timestamp": 1564413583
+    "timestamp": 1564413750
   }
 }
