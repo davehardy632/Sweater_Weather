@@ -10,7 +10,6 @@ class DailyForecast
               :temperature_low
 
   def initialize(daily_forecast_data)
-    binding.pry
     @id = "daily forecast info"
     @time = daily_forecast_data[:time]
     @summary = daily_forecast_data[:summary]

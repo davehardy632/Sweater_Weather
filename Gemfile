@@ -54,6 +54,7 @@ group :development, :test do
   gem 'launchy'
   gem 'awesome_print'
   gem 'webmock'
+  # gem 'vcr'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'rubocop', '~> 0.72.0', require: false
