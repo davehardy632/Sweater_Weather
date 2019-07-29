@@ -2,20 +2,17 @@ require 'rails_helper'
 
 describe GoogleDirectionsApiService do
 
-  describe "members" do
+  describe "trip information" do
     it "finds trip information" do
-      VCR.use_cassette("services/returns_trip_data") do
-        start = "denver,co"
-        finish = "pueblo,co"
-        members = GoogleDirectionsApiService.new(start, finish)
-        .find_house_members("CO")
-        member = members.first
+      start = "denver,co"
+      finish = "pueblo,co"
+      trip = GoogleDirectionsApiService.new(start, finish)
+      trip_data = trip.return_trip
 
-        expect(members.count).to eq(7)
-        expect(member[:name]).to eq("Diana DeGette")
-        expect(member[:party]).to eq("D")
-        expect(member[:district]).to eq("1")
-      end
+
+      expect(trip_data[:routes].first[:legs].first[:duration][:text]).to eq("1 hour 47 mins")
+      expect(trip_data[:routes].first[:legs].first[:duration][:value]).to eq(6413)
+      expect(trip_data[:routes].first[:legs].first[:end_address]).to eq("Pueblo, CO, USA")
     end
   end
 end

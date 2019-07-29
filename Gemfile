@@ -53,7 +53,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'awesome_print'
-  gem 'vcr'
+  # gem 'vcr'
   gem 'webmock'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'

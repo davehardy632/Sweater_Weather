@@ -3,15 +3,15 @@ require 'rails_helper'
 describe "time length between locations and find matching cuisines" do
   it "makes an api call to yelp and google directions api" do
 
-    get '/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese'
+      get '/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese'
 
-    expect(response).to be_successful
+      expect(response).to be_successful
 
-    trip_data = JSON.parse(response.body)
+      trip_data = JSON.parse(response.body)
 
-    expect(trip_data["data"]["attributes"]["end_city"]).to eq("Pueblo, CO, USA")
-    expect(trip_data["data"]["attributes"]["restaurants"].count).to eq(3)
-    expect(trip_data["data"]["attributes"]["restaurants"].first.keys).to eq(["name", "address"])
+      expect(trip_data["data"]["attributes"]["end_city"]).to eq("Pueblo, CO, USA")
+      expect(trip_data["data"]["attributes"]["restaurants"].count).to eq(3)
+      expect(trip_data["data"]["attributes"]["restaurants"].first.keys).to eq(["name", "address"])
   end
 end
 
