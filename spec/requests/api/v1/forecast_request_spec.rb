@@ -39,12 +39,4 @@ describe "Forecast and location Api" do
 
     expect(flickr_image["data"]["attributes"].keys).to eq(["id", "url"])
   end
-
-  # it "returns yelp json response when making a request" do
-  #
-  #   get '/api/v1/yelp?city_to_coordinates=denver,co'
-  #
-  #   expect()
-
-  # end
 end
