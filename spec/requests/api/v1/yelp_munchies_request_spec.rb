@@ -8,8 +8,10 @@ describe "time length between locations and find matching cuisines" do
     expect(response).to be_successful
 
     trip_data = JSON.parse(response.body)
-binding.pry
-    expect(trip_data.count).to eq(3)
+
+    expect(trip_data["data"]["attributes"]["end_city"]).to eq("Pueblo, CO, USA")
+    expect(trip_data["data"]["attributes"]["restaurants"].count).to eq(3)
+    expect(trip_data["data"]["attributes"]["restaurants"].first.keys).to eq(["name", "address"])
   end
 end
 
