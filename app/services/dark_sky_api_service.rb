@@ -1,11 +1,12 @@
 class DarkSkyApiService
 
-  def initialize(coordinate_object)
-    @coordinate_object = coordinate_object
+  def initialize(latitude, longitude)
+    @latitude = latitude
+    @longitude = longitude
   end
 
   def parse_weather_data
-    parsed_response(conn.get("/forecast/#{ENV['Dark_Sky_API_KEY']}/#{coordinate_object.latitude},#{coordinate_object.longitude}?exclude=minutely,alerts,flags"))
+    parsed_response(conn.get("/forecast/#{ENV['Dark_Sky_API_KEY']}/#{latitude},#{longitude}?exclude=minutely,alerts,flags"))
   end
 
   def parsed_response(response)
@@ -14,7 +15,7 @@ class DarkSkyApiService
 
   private
 
-  attr_reader :coordinate_object
+  attr_reader :latitude, :longitude
 
   def conn
     Faraday.new(url: "https://api.darksky.net") do |f|
