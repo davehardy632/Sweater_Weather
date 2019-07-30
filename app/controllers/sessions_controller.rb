@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
         "api_key": user.api_key,
       }, status: :ok
     else
-      render status: :unauthorized
+      render json: {
+        status: :unauthorized
+        }
     end
   end
 
