@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+    <photos page="1" pages="58" perpage="1" total="58">
+        <photo id="39910698973" owner="32411159@N05" secret="532368e033" server="4912" farm="5" title="Coors Field with Downtown Denver in background" ispublic="1" isfriend="0" isfamily="0" />
+    </photos>
+</rsp>

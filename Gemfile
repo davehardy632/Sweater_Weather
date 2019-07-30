@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
+gem 'bcrypt'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
@@ -21,6 +22,7 @@ gem 'bootstrap-sass'
 gem 'active_model_serializers'
 gem 'will_paginate'
 gem 'acts-as-taggable-on', '~> 6.0'
+# gem 'devise'
 gem 'omniauth-census', git: "https://github.com/turingschool-projects/omniauth-census"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -45,6 +47,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
+  gem 'devise'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov'
@@ -54,6 +57,7 @@ group :development, :test do
   gem 'launchy'
   gem 'awesome_print'
   gem 'webmock'
+  # gem 'vcr'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'rubocop', '~> 0.72.0', require: false

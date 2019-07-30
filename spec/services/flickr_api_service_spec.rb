@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Forecast and location Api" do
+describe FlickrApiService do
   before :each do
     json_forecast_response = File.open("./fixtures/dark_sky_forecast_data.json")
 
@@ -35,30 +35,20 @@ describe "Forecast and location Api" do
         }).
         to_return(status: 200, body: xml_url_flickr_response , headers: {})
   end
-  it "returns forecast data from the returned latitude and longitude from above" do
+  describe "Flickr api calls" do
+    it "flickr api call returns data to build a url" do
 
+      flickr_api = FlickrApiService.new
 
-    get '/api/v1/forecast?location=denver,co'
+      facade = ImageFacade.new("denver,co")
 
-    expect(response).to be_successful
+      api_response = flickr_api.return_image_background("denver,co")
 
-    weather_data = JSON.parse(response.body)
-
-    current_forecast_data = weather_data["data"]["attributes"]["current_forecast"]["data"]["attributes"]
-
-    expected_keys = ["id", "timezone", "time", "summary", "icon", "precipitation_probablility", "temperature", "feels_like_temperature", "humidity", "uv_index", "visibility"]
-
-    expect(current_forecast_data.keys).to eq(expected_keys)
-  end
-
-  it "the url returns an image of the city entered in the parameters" do
-
-    get '/api/v1/backgrounds?location=denver,co'
-
-    expect(response).to be_successful
-
-    flickr_image = JSON.parse(response.body)
-
-    expect(flickr_image["data"]["attributes"].keys).to eq(["id", "url"])
+      expect(api_response[:rsp][:photos][:photo][:secret]).to eq("532368e033")
+      expect(api_response[:rsp][:photos][:photo][:id]).to eq("39910698973")
+      expect(api_response[:rsp][:photos][:photo][:farm]).to eq("5")
+      expect(api_response[:rsp][:photos][:photo][:server]).to eq("4912")
+      expect(facade.url).to eq("https://farm5.staticflickr.com/4912/39910698973_532368e033.jpg")
+    end
   end
 end

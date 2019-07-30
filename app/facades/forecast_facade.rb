@@ -52,6 +52,8 @@ class ForecastFacade
   end
 
   def dark_sky_api_service(lat_long_coordinates)
-    DarkSkyApiService.new(lat_long_coordinates)
+    latitude = lat_long_coordinates.latitude
+    longitude = lat_long_coordinates.longitude
+    DarkSkyApiService.new(latitude, longitude)
   end
 end
