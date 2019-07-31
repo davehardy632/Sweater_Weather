@@ -7,7 +7,31 @@ class DarkSkyApiService
   end
 
   def parse_weather_data
-    parsed_response(conn.get("/forecast/#{ENV['Dark_Sky_API_KEY']}/#{latitude},#{longitude}?exclude=minutely,alerts,flags"))
+    if updated_forecast
+      updated_forecast
+    else
+      forecast_data = parsed_response(conn.get("/forecast/#{ENV['Dark_Sky_API_KEY']}/#{latitude},#{longitude}?exclude=minutely,alerts,flags"))
+      forecast = Forecast.create(latitude: latitude, longitude: longitude, data: forecast_data)
+      JSON.parse(forecast.data.to_json, symbolize_names: true)
+    end
+  end
+
+  def updated_forecast
+    forecast = Forecast.find_by(latitude: latitude, longitude: longitude)
+    if forecast && (forecast.updated_at.to_i) > (Time.now.to_i - 1800)
+      forecast.data
+    else
+      false
+    end
+  end
+
+  def fetch_latest_forecast
+    forecast = Forecast.find_by(latitude: latitude, longitude: longitude)
+    if forecast
+      forecast.data
+    else
+      Forecast.create(latitude: latitude, longitude: longitude, data: forecast)
+    end
   end
 
   def parse_weather_data_upon_arrival

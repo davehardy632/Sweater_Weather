@@ -37,5 +37,34 @@ describe DarkSkyApiService do
       expect(parsed_weather_data[:longitude]).to eq(longitude)
       expect(parsed_weather_data[:timezone]).to eq("America/Denver")
     end
+
+    it "tests fetch latest forecast" do
+      latitude = 39.7392358
+      longitude = -104.990251
+      service = DarkSkyApiService.new(latitude, longitude)
+
+      latest_forecast = service.fetch_latest_forecast
+
+      expect(latest_forecast.latitude).to eq(39.7392358)
+      expect(latest_forecast.longitude).to eq(-104.990251)
+    end
+
+    it "tests fetch latest forecast" do
+      latitude = 39.7392358
+      longitude = -104.990251
+
+      data = {
+        "dummy data": "dummy data value"
+      }
+
+      forecast = Forecast.create(latitude: latitude, longitude: longitude)
+
+      service = DarkSkyApiService.new(latitude, longitude)
+
+      latest_forecast = service.fetch_latest_forecast
+
+      expect(latest_forecast.latitude).to eq(39.7392358)
+      expect(latest_forecast.longitude).to eq(-104.990251)
+    end
   end
 end

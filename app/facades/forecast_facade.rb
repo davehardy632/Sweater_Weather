@@ -8,7 +8,8 @@ class ForecastFacade
   end
 
   def forecast_data_by_city
-    dark_sky_api_service(coordinates_from_city_state).parse_weather_data
+    forecast_data = dark_sky_api_service(coordinates_from_city_state).parse_weather_data
+    JSON.parse(forecast_data.to_json, symbolize_names: true)
   end
 
   def parse_current

@@ -13,5 +13,4 @@ class Api::V1::ForecastController < ApplicationController
   def forecast_facade
     ForecastFacade.new(forecast_params["location"])
   end
-
 end
