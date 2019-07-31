@@ -1,4 +1,4 @@
-class RoadTripController < ApplicationController
+class Api::V1::RoadTripController < ApplicationController
 
   def index
     user = User.where(api_key: road_trip_params["api_key"]).first
