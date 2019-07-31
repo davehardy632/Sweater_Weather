@@ -198,6 +198,10 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/coordinate.rb": [
@@ -963,7 +967,7 @@
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/forecast_controller.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/forecast_controller.rb": [
         1,
         null,
         1,
@@ -1095,7 +1099,7 @@
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/background_controller.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/background_controller.rb": [
         1,
         null,
         1,
@@ -1154,7 +1158,7 @@
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/sessions_controller.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/sessions_controller.rb": [
         1,
         null,
         1,
@@ -1180,7 +1184,7 @@
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/users_controller.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/users_controller.rb": [
         1,
         null,
         1,
@@ -1207,7 +1211,7 @@
         null,
         null
       ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/road_trip_controller.rb": [
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/road_trip_controller.rb": [
         1,
         null,
         1,
@@ -1324,6 +1328,6 @@
         null
       ]
     },
-    "timestamp": 1564541517
+    "timestamp": 1564541885
   }
 }

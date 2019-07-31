@@ -1,4 +1,4 @@
-class BackgroundController < ApplicationController
+class Api::V1::BackgroundController < ApplicationController
 
   def show
     render json: ImageSerializer.new(ImageFacade.new(image_params["location"]))
