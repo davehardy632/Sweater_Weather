@@ -1,5 +1,7 @@
 class Api::V1::ForecastController < ApplicationController
 
+  # caches_page :index
+
   def index
     render json: ForecastSerializer.new(forecast_facade)
   end

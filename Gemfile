@@ -22,6 +22,8 @@ gem 'bootstrap-sass'
 gem 'active_model_serializers'
 gem 'will_paginate'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'sidekiq'
+gem 'sinatra'
 # gem 'devise'
 gem 'omniauth-census', git: "https://github.com/turingschool-projects/omniauth-census"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

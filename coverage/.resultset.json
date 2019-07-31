@@ -32,8 +32,7 @@
         1,
         null,
         1,
-        null,
-        null,
+        1,
         null,
         null,
         null,
@@ -179,6 +178,13 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/spec/factories/forecasts.rb": [
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -380,6 +386,30 @@
         null,
         null
       ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/spec/models/forecast_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/forecast.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/spec/models/hourly_forecast_spec.rb": [
         1,
         null,
@@ -443,11 +473,6 @@
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/user.rb": [
         1,
         1,
-        1,
-        1,
-        null
-      ],
-      "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/models/application_record.rb": [
         1,
         1,
         null
@@ -701,6 +726,30 @@
         null,
         1,
         4,
+        2,
+        null,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        6,
+        6,
+        4,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null,
         1,
@@ -708,7 +757,11 @@
         null,
         null,
         1,
-        6,
+        0,
+        null,
+        null,
+        1,
+        4,
         null,
         null,
         1,
@@ -716,8 +769,8 @@
         1,
         null,
         1,
-        6,
-        6,
+        4,
+        4,
         null,
         null,
         null
@@ -970,6 +1023,8 @@
       "/Users/davehardy632/turing/3module/projects/Sweater_Weather/app/controllers/api/v1/forecast_controller.rb": [
         1,
         null,
+        null,
+        null,
         1,
         1,
         null,
@@ -1011,6 +1066,7 @@
         null,
         null,
         1,
+        3,
         3,
         null,
         null,
@@ -1328,6 +1384,6 @@
         null
       ]
     },
-    "timestamp": 1564541885
+    "timestamp": 1564596609
   }
 }
