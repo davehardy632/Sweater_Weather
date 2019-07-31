@@ -1,12 +1,15 @@
 class RoadTripController < ApplicationController
 
   def index
-    if User.find_by(api_key: road_trip_params["api_key"])
+    user = User.where(api_key: road_trip_params["api_key"]).first
+    if user
       render json: RoadTripSerializer.new(road_trip_facade)
     else
-      render json: {
-        status: :unauthorized
-        }
+      payload = {
+        error: "Incorrect Api Key",
+        status: 401
+      }
+        render :json => payload, :status => :unauthorized
     end
   end
 
@@ -19,5 +22,4 @@ class RoadTripController < ApplicationController
   def road_trip_facade
     RoadTripFacade.new(road_trip_params["origin"], road_trip_params["destination"])
   end
-
 end

@@ -1,0 +1,39 @@
+{
+    "latitude": 39.7392358,
+    "longitude": -104.990251,
+    "timezone": "America/Denver",
+    "currently": {
+        "time": 1564541044,
+        "summary": "Partly Cloudy",
+        "icon": "partly-cloudy-night",
+        "precipIntensity": 0,
+        "precipProbability": 0,
+        "temperature": 80.9,
+        "apparentTemperature": 80.9,
+        "dewPoint": 48.59,
+        "humidity": 0.32,
+        "pressure": 1011.74,
+        "windSpeed": 6.49,
+        "windGust": 17.99,
+        "windBearing": 203,
+        "cloudCover": 0.39,
+        "uvIndex": 0,
+        "visibility": 10,
+        "ozone": 293
+    },
+    "flags": {
+        "sources": [
+            "cmc",
+            "gfs",
+            "hrrr",
+            "icon",
+            "isd",
+            "madis",
+            "nam",
+            "sref"
+        ],
+        "nearest-station": 0.836,
+        "units": "us"
+    },
+    "offset": -6
+}
