@@ -38,10 +38,6 @@ class DarkSkyApiService
     parsed_response(conn.get("/forecast/#{ENV['Dark_Sky_API_KEY']}/#{latitude},#{longitude},#{Time.now.to_i + time}?exclude=hourly,daily"))
   end
 
-  def parse_database_response(response)
-    JSON.parse(response, symbolize_names: true)
-  end
-
   def parsed_response(response)
     JSON.parse(response.body, symbolize_names: true)
   end
