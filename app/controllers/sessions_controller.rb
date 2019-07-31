@@ -8,12 +8,13 @@ class SessionsController < ApplicationController
         "api_key": user.api_key,
       }, status: :ok
     else
-      render json: {
-        status: :unauthorized
-        }
+      payload = {
+        error: "Incorrect Credentials",
+        status: 400
+      }
+        render :json => payload, :status => :bad_request
     end
   end
-
 
   private
 

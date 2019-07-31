@@ -22,6 +22,7 @@ class RoadTripFacade
 
   def weather_data_by_destination
     dark_sky_api_service.parse_weather_data_upon_arrival
+    
   end
 
   def forecast_at_arrival
